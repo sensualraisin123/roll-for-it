@@ -87,7 +87,7 @@ function ChoicePill({
 }) {
   return (
     <div
-      className={`choice-item flex items-center justify-between gap-2 px-4 py-4 rounded-xl
+      className={`choice-item flex items-center justify-between gap-2 px-4 py-5 rounded-xl
         transition-all duration-300
         ${isWinner
           ? 'result-glow'
@@ -259,7 +259,7 @@ export default function RollForIt() {
               onChange={e => setInputValue(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder="Type a choice..."
-              className="flex-1 rounded-xl px-4 py-4 text-sm font-medium outline-none transition-all duration-200
+              className="flex-1 rounded-xl px-4 py-5 text-sm font-medium outline-none transition-all duration-200
                 placeholder:text-gray-600"
               style={{
                 background: 'var(--surface-2)',
@@ -272,7 +272,7 @@ export default function RollForIt() {
             <button
               onClick={addChoice}
               disabled={!inputValue.trim()}
-              className="shrink-0 px-4 py-4 rounded-xl text-sm font-semibold
+              className="shrink-0 px-4 py-5 rounded-xl text-sm font-semibold
                 transition-all duration-150 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed"
               style={{
                 background: inputValue.trim()
