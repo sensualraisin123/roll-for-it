@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Roll For It 🎲',
   description: 'Let the dice decide.',
   icons: {
-    apple: '/apple-icon.png.png',
+    apple: '/app-icon.png.png',
   },
 }
 
