@@ -206,7 +206,7 @@ export default function RollForIt() {
   useEffect(() => () => { if (tickerRef.current) clearInterval(tickerRef.current) }, [])
 
   return (
-    <div className="relative min-h-dvh flex flex-col items-center justify-start py-12 px-4 z-10">
+    <div className="relative z-10 flex flex-col gap-6" style={{ width: '100%', maxWidth: '480px', margin: '0 auto' }}>
 
       {/* Background radial glow */}
       <div
