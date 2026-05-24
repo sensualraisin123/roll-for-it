@@ -11,7 +11,7 @@ interface Choice {
 type Phase = 'idle' | 'rolling' | 'result'
 
 // ─── Die Face SVG ─────────────────────────────────────────────────────────────
-function DieFace({ value, sides, rolling }: { value: number; sides: number; rolling: boolean }) {
+function DieFace({ value, rolling }: { value: number; rolling: boolean }) {
   return (
     <div
       className={`relative flex items-center justify-center select-none
@@ -37,13 +37,6 @@ function DieFace({ value, sides, rolling }: { value: number; sides: number; roll
           border: '1px solid rgba(245,200,66,0.4)',
         }}
       >
-        {/* Sides label */}
-        <span
-          className="absolute top-1.5 left-0 right-0 text-center font-display"
-          style={{ fontSize: 9, color: 'rgba(245,200,66,0.5)', letterSpacing: '0.05em' }}
-        >
-          d{sides}
-        </span>
         {/* Value */}
         <span
           key={rolling ? 'rolling' : value}
@@ -316,7 +309,6 @@ export default function RollForIt() {
           {(phase !== 'idle' || choices.length >= 2) && (
             <DieFace
               value={phase === 'idle' ? choices.length : dieDisplay}
-              sides={choices.length}
               rolling={phase === 'rolling'}
             />
           )}
